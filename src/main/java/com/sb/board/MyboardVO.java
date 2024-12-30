@@ -15,15 +15,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MyboardVO {
-	//ALt+SHIFT + Y(소문자)   ....   X(대문자)  	
+	
 	private int bseq;
 	private String title;
 	private String contents;
 	private String regid;
 	private String regdate;
-	
-	
-	
-	
-
 }
