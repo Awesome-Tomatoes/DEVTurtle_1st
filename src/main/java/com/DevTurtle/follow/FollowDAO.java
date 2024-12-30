@@ -1,4 +1,4 @@
-package com.DevTurtle.user;
+package com.DevTurtle.follow;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,25 +8,24 @@ import java.util.ArrayList;
 
 import com.DevTurtle.common.DBManager;
 import com.DevTurtle.common.OracleDBManager;
+import com.DevTurtle.user.UserVO;
 
-public class UserDAO {
-
-	//단일 유저 더미
-	public UserVO select(String userID) {
-		return new UserVO(1,"name","id","pw","nickname","create","update","solved","git","userbio",1000,300,700);
+public class FollowDAO {
+	
+	//단일 팔로워 더미
+	public FollowVO select(int followID) {
+		return new FollowVO(1,1,2,"accept");
 	}
 	
-	//유저리스트 더미
-	public ArrayList<UserVO> select() {
-		ArrayList<UserVO> alist = new ArrayList<UserVO>();
-		alist.add(new UserVO(1,"name1","id1","pw1","nickname1","create1","update1","solved1","git1","userbio",1000,300,700));
-		alist.add(new UserVO(2,"name2","id2","pw2","nickname2","create2","update2","solved2","git2","userbio",1200,500,700));
-		alist.add(new UserVO(3,"name3","id3","pw3","nickname3","create3","update3","solved3","git3","userbio",1100,500,600));
-		alist.add(new UserVO(4,"name4","id4","pw4","nickname4","create4","update4","solved4","git4","userbio",940,510,430));
-		return alist;
+	//팔로우 리스트 더미
+	public ArrayList<FollowVO> select(){
+		ArrayList<FollowVO> flist = new ArrayList<FollowVO>();
+		flist.add(new FollowVO(1,1,2,"accept"));
+		flist.add(new FollowVO(2,1,3,"accept"));
+		return flist;
 	}
 	
-	public ArrayList<UserVO> selectAllUser(){
+	public ArrayList<UserVO> selectAllFollowed(int userID){
 		ArrayList<UserVO> ulist = new ArrayList<UserVO>();
 		DBManager dbm = OracleDBManager.getInstance(); 
 		Connection conn = dbm.connect();
@@ -60,7 +59,7 @@ public class UserDAO {
 		return ulist;
 	}
 	
-	public ArrayList<UserVO> selectAllUserOrderByRank(){
+	public ArrayList<UserVO> selectAllFollowing(int userID){
 		ArrayList<UserVO> ulist = new ArrayList<UserVO>();
 		DBManager dbm = OracleDBManager.getInstance(); 
 		Connection conn = dbm.connect();
@@ -68,7 +67,7 @@ public class UserDAO {
 		ResultSet rs = null;
 		
 		try {
-			String sql = "select * from users order by TOTAL_SCORE";
+			String sql = "select * from users";
 			pstmt =  conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();  
 			while(rs.next()) {
@@ -93,5 +92,4 @@ public class UserDAO {
 		}
 		return ulist;
 	}
-	
 }
