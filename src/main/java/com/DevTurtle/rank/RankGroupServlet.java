@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class RankGroupServlet
  */
-@WebServlet("/RankGroupServlet")
+@WebServlet("/RankGroup")
 public class RankGroupServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
