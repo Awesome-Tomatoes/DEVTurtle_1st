@@ -31,7 +31,7 @@
             <button type="submit" class="login-btn">로그인</button>
         </form>
         <div class="register-link">
-            <p>아직 회원이 아니신가요? <a href="signin.jsp">회원가입</a></p>
+            <p>아직 회원이 아니신가요? <a href="${pageContext.request.contextPath}/user/user_signup.jsp">회원가입</a></p>
         </div>
     </div>
 </body>
