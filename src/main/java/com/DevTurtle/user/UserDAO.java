@@ -94,4 +94,18 @@ public class UserDAO {
 		return ulist;
 	}
 	
+	public void insert(UserVO uvo) {
+		System.out.println("insert 성공");
+	}
+
+	public void update(UserVO uvo, int gitScore, int solvedScore) {
+		uvo.setGitScore(gitScore);
+		uvo.setSolvedScore(solvedScore);
+		uvo.setTotalScore(gitScore+solvedScore);
+		System.out.println("update 성공");
+	}
+	
+	public void delete(UserVO uvo) {
+		System.out.println("update 성공");
+	}
 }
