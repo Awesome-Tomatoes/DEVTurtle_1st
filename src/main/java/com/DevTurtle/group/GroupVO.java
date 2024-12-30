@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.DevTurtle.group;
 
 import lombok.AllArgsConstructor;
@@ -11,6 +8,7 @@ import lombok.NoArgsConstructor;
  * Description : 클래스에 대한 설명을 입력해주세요.<br>
  * Date : 2024. 12. 30.<br>
  * History :<br>
+<<<<<<< HEAD
  * - 작성자 : user, 날짜 : 2024. 12. 30., 설명 : 최초작성<br>
  *
  * @author user
@@ -31,4 +29,5 @@ public class GroupVO {
 	private String createdAt;
 	private String updatedAt;
 	
+
 }

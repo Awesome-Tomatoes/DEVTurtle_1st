@@ -1,19 +1,17 @@
-/**
- * 
- */
 package com.DevTurtle.follow;
 
-/**
- * Description : 클래스에 대한 설명을 입력해주세요.<br>
- * Date : 2024. 12. 30.<br>
- * History :<br>
- * - 작성자 : user, 날짜 : 2024. 12. 30., 설명 : 최초작성<br>
- *
- * @author user
- * @version 1.0
- */
-public class FollowVO {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class FollowVO {
 	
+	public int followID;
+	public int followed;
+	public int following;
+	public String status;
 	
 }
