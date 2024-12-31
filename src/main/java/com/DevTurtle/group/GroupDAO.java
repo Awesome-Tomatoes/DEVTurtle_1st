@@ -20,8 +20,5 @@ public class GroupDAO {
 		alist.add(new GroupVO(4,"group4","설명4","스터디","공개",80000,30,"2024-12-12","2024-12-12"));	
 		
 		return alist;
-	
 	}
-	
-
 }

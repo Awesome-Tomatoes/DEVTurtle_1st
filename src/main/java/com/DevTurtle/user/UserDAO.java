@@ -106,6 +106,6 @@ public class UserDAO {
 	}
 	
 	public void delete(UserVO uvo) {
-		System.out.println("update 성공");
+		System.out.println("delete 성공");
 	}
 }
