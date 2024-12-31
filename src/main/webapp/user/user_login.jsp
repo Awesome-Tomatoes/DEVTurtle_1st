@@ -34,9 +34,6 @@
             <p>아직 회원이 아니신가요? <a href="${pageContext.request.contextPath}/user/user_signup.jsp">회원가입</a></p>
         </div>
     </div>
-</body>
-</html>
-</html>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script>
@@ -46,3 +43,5 @@ $( document ).ready(function() {
 	//});
 });
 </script>
+</body>
+</html>
